@@ -102,20 +102,23 @@ $(function regexpSignIn(){
 });
 $("#phoneReg").mask("+7(999) 999-9999");
 
-
-$("#reg-form form").change( function () {
+$(".registr-but").on("click", function (e) {
+		e.preventDefault();
         var $form = $("#reg-form");
         $.ajax({
             type: "POST",
             url: "#",
-            data: $form.serialize()
+            data: $form.serialize(),
         }).done(function(data) {
-        	/*$(".img-reg").hide().html(data);*/
         	$(".successReg").show().html(data);
-            
+        	$(".img-reg").hide().html(data);
+        	var delay = 3000;
+ 			setTimeout("document.location.href='http://vk.com'", delay);
+
         }).fail(function() {
             console.log('fail');
         });
-    });
-
+      
+        return false;
+    });  
 
