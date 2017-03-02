@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Это начало кода pop-up окна -->
+
+			<div class="pop-up-main">
+				<div class="content-pop-up-main">
+					<div class="tabs-reg-user">
+						<div class=" tab-reg sign-in"> <a href="#">Авторизация</a></div>
+						<div class="registr"> <a href="registr-pop-up/index.html">Регистрация</a></div>
+					</div>
+					<div class="tab-item-reg">
+						<div class="close-pop-up-reg"><a onclick="PopUpHide()" href="#"><img src="images/close-pop-up-reg.png" alt=""></a></div>
+						<div class="tab-reg-content">
+							<form id="sign-in-form" action="#" onsubmit="return validateSignIn()" method="post">
+								<input   id="mailSignIn"  class="sign-in-inp"  name="sign_in_mail" type="text" placeholder="E-mail" title="asdas">
+								<input    class="sign-in-inp" id="passwordSignIn" name="sign_in_pass" type="password" placeholder="Пароль">
+								<button class="registr-but" type="submit">Войти</button>
+								<div class="down-block-sign-in">
+									<div class="soc-icons-sign-in">
+										<a href="#"><img src="images/reg-g+.png" alt=""></a>
+										<a href="#"><img src="images/reg-fb.png" alt=""></a>
+										<a href="#"><img src="images/reg-vk.png" alt=""></a>
+										<a href="#"><img src="images/reg-mail.png" alt=""></a>
+									</div>
+									<div class="zabil-pass">
+										<a href="#">Забыли пароль?</a>
+									</div>
+								</div>
+							</form>
+						</div>	
+					</div>
+
+					<div class="tab-item-reg">
+						<div class="close-pop-up-reg"><a onclick="PopUpHide()" href="#"><img src="images/close-pop-up-reg.png" alt=""></a></div>
+						<div class="tab-reg-content">
+							<form id="reg-form" action="#"  method="post" onsubmit="return validateReg()">
+
+								<input  class="reg-inp" id="nameReg" name="reg_name" type="text" placeholder="Имя">
+								<div class="fornameReg">Необходимо использовать от 2 до 20 символов Киррилицы</div>
+								<input  class="reg-inp" id="famReg" name="reg_sername" type="text" placeholder="Фамилия">
+								<div class="forfamReg"></div>
+
+								<input  class="reg-inp" id="mailReg" name="reg_mail" type="text" placeholder="E-mail">
+
+								<input  class="reg-inp" id="passwordReg" name="reg_pass" type="password" placeholder="Пароль">
+
+								<input  class="reg-inp" id="passwordRegRepl" name="reg_pass_repl" type="password" placeholder=" Повторите пароль">
+
+								<input   class="reg-inp" id="phoneReg" name="reg_tel" type="text" placeholder="Телефон">
+
+								<button class="registr-but" type="submit">Войти</button>
+								<div class="down-block-reg">
+									<div class="soc-icons-reg">
+										<a href="#"><img src="images/reg-g+.png" alt=""></a>
+										<a href="#"><img src="images/reg-fb.png" alt=""></a>
+										<a href="#"><img src="images/reg-vk.png" alt=""></a>
+										<a href="#"><img src="images/reg-mail.png" alt=""></a>
+									</div>
+								</div>
+							</form>
+						</div>	
+					</div>
+
+				</div>
+			</div>
+
+		<!-- Это конец кода pop-up окна -->
+
+<header class="mainHeader">
+	<div class="topHeader">
+		<div class="centerBlock clearfix">
+			<div class="logo">
+				<a href="/" class="logo"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="headerNav">
+				<nav class="mainNav">
+					<ul class="mainNav__menu">
+						<li class="active"><a href="#">Места</a></li>
+						<li><a href="#">Туры</a></li>
+						<li><a href="#">Аренда транспорта</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Истории</a></li>
+						<li><a href="#">О сервисе</a></li>
+					</ul>
+				</nav>
+				<a href="#" onclick="PopUpShow()" class="userLink"><span>Профиль</span><img src="images/avatar.png" alt="asd"></a>
+			</div>
+		</div>
+	</div>
+
+</header>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="css/owl.carousel.css">
+<script src="js/scripts.js"></script>
+</body>
+</html>

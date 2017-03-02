@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="mainHeader">
+	<div class="topHeader">
+		<div class="centerBlock clearfix">
+			<div class="logo">
+				<a href="/" class="logo"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="headerNav">
+				<nav class="mainNav">
+					<ul class="mainNav__menu">
+						<li class="active"><a href="#">Места</a></li>
+						<li><a href="#">Туры</a></li>
+						<li><a href="#">Аренда транспорта</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Истории</a></li>
+						<li><a href="#">О сервисе</a></li>
+					</ul>
+				</nav>
+				<a href="#" onclick="PopUpShow()" class="SignInProfile"><img src="images/sign-in-prof.png" alt=""><span>Профиль</span></a>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- Это начало кода pop-up окна регистрации ******************************-->
+
+
+
+<!-- Надо заменить в хейдере "Профиль" на "Вход" -->
+
+
+					<div class="reg-block ">
+						<div class="left-content-reg">
+							<h1>Регистрация</h1>
+							<div class="reg-block-content">
+								<form id="reg-form" action="#"  method="post" onsubmit="return validateReg()">
+									<div class="formContent">
+
+										<div class="formContentLeft">
+
+											<span>Имя</span>
+											<input  class="reg-inp" id="nameReg" name="reg_name" type="text" placeholder="Введите свое имя">
+
+											<span>Фамилия</span>
+											<input  class="reg-inp" id="famReg" name="reg_sername" type="text" placeholder="Введите свою фамилию">
+
+											<span>Телефон</span>
+											<input   class="reg-inp" id="phoneReg" name="reg_tel" type="text" placeholder="Введите свой телефон (мы вам не будем названивать)">
+
+											<button class="registr-but" type="submit">Зарегистрироваться</button>
+
+										</div>
+
+										<div class="formContentRight">
+												<span>E-mail</span>
+												<input  class="reg-inp" id="mailReg" name="reg_mail" type="text" placeholder="Введите свою электронную почту">
+
+												<span>Пароль</span>
+												<input  class="reg-inp" id="passwordReg" name="reg_pass" type="password" placeholder="Придумайте пароль">
+
+												<span>Повторите пароль</span>
+												<input  class="reg-inp" id="passwordRegRepl" name="reg_pass_repl" type="password" placeholder="Повторите пароль снова">
+
+												<div class="soc-icons-reg">
+													<a href="#"><img src="images/reg-g+.png" alt=""></a>
+													<a href="#"><img src="images/reg-fb.png" alt=""></a>
+													<a href="#"><img src="images/reg-vk.png" alt=""></a>
+													<a href="#"><img src="images/reg-mail.png" alt=""></a>
+												</div>
+										</div>
+									</div>
+									
+								</form>
+							</div>
+						</div>
+						<div class="rightContentReg">
+							<div class="successReg">
+								<div class="successRegContent">
+									<div class="successRegTop">
+										<div class="successPaint">
+											<div class="successIcon">
+												<img src="images/success-icon.png" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="successRegDown">
+										<h2>Регистрация прошла успешно</h2>
+										<span>
+											Вам на почту отправленно письмо <br> с подтверждением.
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="img-reg">
+							</div>
+						</div>
+								
+					</div>
+
+				</div>
+			</div>
+
+		<!-- Это конец кода pop-up окна -->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="css/owl.carousel.css">
+<script src="js/scripts.js"></script>
+</body>
+</html>
