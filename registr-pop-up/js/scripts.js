@@ -16,22 +16,34 @@ $(".tab-reg").click(function() {
 
 
 
-	$(".registr").click(function(){
-		$(".content-pop-up-main").animate({top: "99px"},0)
-	});
-	$(".sign-in").click(function(){
-		$(".content-pop-up-main").animate({top: "190px"},0)
-	})
 
 	$(document).ready(function(){
    $(".pop-up-main").hide();
 });
-function PopUpShow(){
-    $(".pop-up-main").show();
-}
-function PopUpHide(){
-    $(".pop-up-main").hide();
-}
+
+var signInProfile = $(".SignInProfile");
+var userLink = $(".userLink");
+var popUpMain = $(".pop-up-main");
+var exitPopUp = $(".close-pop-up-reg,.exitPopUp");
+
+	signInProfile.on("click",  (e) => {
+		e.preventDefault();
+		popUpMain.show();
+		return	false;
+	});
+	exitPopUp.on("click",  (e) => {
+		e.preventDefault();
+		popUpMain.hide();
+		return	false;
+	});
+
+	userLink.on("click",  (e) => {
+		e.preventDefault();
+		popUpMain.show();
+		return	false;
+	});
+
+
 
 
 /***********************************************/

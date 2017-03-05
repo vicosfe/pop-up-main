@@ -8,6 +8,72 @@
 </head>
 <body>
 
+	<!-- Это начало кода pop-up окна -->
+
+			<div class="pop-up-main">
+				<div class="content-pop-up-main">
+					<div class="tabs-reg-user">
+						<div class=" tab-reg sign-in"> <a href="#">Авторизация</a></div>
+						<div class="registr exitPopUp"> <a href="#">Регистрация</a></div>
+					</div>
+					<div class="tab-item-reg">
+						<div class="close-pop-up-reg"><a  href="#"><img src="images/close-pop-up-reg.png" alt=""></a></div>
+						<div class="tab-reg-content">
+							<form id="sign-in-form" action="#" onsubmit="return validateSignIn()" method="post">
+								<input   id="mailSignIn"  class="sign-in-inp"  name="sign_in_mail" type="text" placeholder="E-mail" title="asdas">
+								<input    class="sign-in-inp" id="passwordSignIn" name="sign_in_pass" type="password" placeholder="Пароль">
+								<button class="registr-but" type="submit">Войти</button>
+								<div class="down-block-sign-in">
+									<div class="soc-icons-sign-in">
+										<a href="#"><img src="images/reg-g+.png" alt=""></a>
+										<a href="#"><img src="images/reg-fb.png" alt=""></a>
+										<a href="#"><img src="images/reg-vk.png" alt=""></a>
+										<a href="#"><img src="images/reg-mail.png" alt=""></a>
+									</div>
+									<div class="zabil-pass">
+										<a href="#">Забыли пароль?</a>
+									</div>
+								</div>
+							</form>
+						</div>	
+					</div>
+
+					<div class="tab-item-reg">
+						<div class="close-pop-up-reg"><a href="#"><img src="images/close-pop-up-reg.png" alt=""></a></div>
+						<div class="tab-reg-content">
+							<form id="reg-form" action="#"  method="post" onsubmit="return validateReg()">
+
+								<input  class="reg-inp" id="nameReg" name="reg_name" type="text" placeholder="Имя">
+								
+								<input  class="reg-inp" id="famReg" name="reg_sername" type="text" placeholder="Фамилия">
+								
+
+								<input  class="reg-inp" id="mailReg" name="reg_mail" type="text" placeholder="E-mail">
+
+								<input  class="reg-inp" id="passwordReg" name="reg_pass" type="password" placeholder="Пароль">
+
+								<input  class="reg-inp" id="passwordRegRepl" name="reg_pass_repl" type="password" placeholder=" Повторите пароль">
+
+								<input   class="reg-inp" id="phoneReg" name="reg_tel" type="text" placeholder="Телефон">
+
+								<button class="registr-but" type="submit">Войти</button>
+								<div class="down-block-reg">
+									<div class="soc-icons-reg">
+										<a href="#"><img src="images/reg-g+.png" alt=""></a>
+										<a href="#"><img src="images/reg-fb.png" alt=""></a>
+										<a href="#"><img src="images/reg-vk.png" alt=""></a>
+										<a href="#"><img src="images/reg-mail.png" alt=""></a>
+									</div>
+								</div>
+							</form>
+						</div>	
+					</div>
+
+				</div>
+			</div>
+
+		<!-- Это конец кода pop-up окна -->
+
 <header class="mainHeader">
 	<div class="topHeader">
 		<div class="centerBlock clearfix">
@@ -25,11 +91,12 @@
 						<li><a href="#">О сервисе</a></li>
 					</ul>
 				</nav>
-				<a href="#" onclick="PopUpShow()" class="SignInProfile"><img src="images/sign-in-prof.png" alt=""><span>Профиль</span></a>
+				<a href="#" class="SignInProfile"><img src="images/sign-in-prof.png" alt=""><span>Профиль</span></a>
 			</div>
 		</div>
 	</div>
 </header>
+
 <!-- Это начало кода pop-up окна регистрации ******************************-->
 
 

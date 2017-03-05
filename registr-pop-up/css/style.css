@@ -476,179 +476,7 @@ body{
 .footer__social a:last-child{
 	margin-right: 0;
 }
-/**********************************Эти стили новые********************************/
-.pop-up-main{
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	background-color: rgba(46, 48, 54, 0.50);
-	z-index: 15;
-	display: none
-	
-}
-.header__info{
-	position: relative;
-}
-.content-pop-up-main{
-	top: 128px;
-    position: absolute;
-    margin: 0 auto;
-    display: block;
-    left: 0;
-    right: 0;
-    width: 408px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-.tab-item-reg{
-	position: relative;
-}
-.close-pop-up-reg{
-	position: absolute;
-    top: -110px;
-    right: -40px;
-}
-.tabs-reg-user{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: space-between;
-	text-align: center;
-	margin-bottom: 25px;
-}
-.sign-in{
-	padding: 13px 40px;
-	border-top-left-radius: 5px;
-	background-color: #2e3032;
-	width: 50%;
-}
-.sign-in a{
-	text-decoration: none;
-	font-family: "OpenSans";
-	font-size: 18px;
-	color: #fff ;
-}
-.sign-in:hover{
-	cursor: pointer;
-}
-.registr{
-	padding: 13px 40px;
-	border-top-right-radius: 5px;
-	background-color: #2e3032;
-	width: 50%;
-}
-.registr a{
-	text-decoration: none;
-	font-family: "OpenSans";
-	font-size: 18px;
-	color: #fff ;
-}
-.registr:hover{
-	cursor: pointer;
-}
-.active-registr{
-	background-color: #fff !important;
-	
-}
-.active-registr a{
-	color: #2e3036	;
-}
-#sign-in-form{
-	padding: 0 20px;
-}
-#reg-form{
-	padding: 0 20px;
-}
-.sign-in-inp{
-	outline: 0;
-	width: 100%;
-	border: 1px solid #e0e0e0;
-	padding: 15px 14px;
-	font-size: 12px;
-	font-family: "OpenSans";
-	border-radius: 5px;
-	margin-bottom: 20px;
-}
-.registr-but{
-	outline: 0;
-	border: 0;
-	width: 100%;
-	margin-bottom: 20px;
-	padding: 12px 0;
-	background-color: #2e3036;
-	color: #fff;
-	font-size: 14.45px;
-	text-transform: uppercase;
-	font-family: "OpenSansExtraBold";
-	border-radius: 5px;
-}
-.registr-but:hover{
-	cursor: pointer;
-}
-.down-block-reg{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 20px;
-	height: 24px;
-}
-.soc-icons-reg{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: space-between;
-	width: 30%;
-}
-.zabil-pass a{
-	font-size: 12px;
-	text-decoration: none;
-	font-family:"OpenSans";
-	color: #2e3036;
-}
-.reg-inp{
-	outline: 0;
-	width: 100%;
-	border: 1px solid #e0e0e0;
-	padding: 15px 14px;
-	font-size: 12px;
-	font-family: "OpenSans";
-	border-radius: 5px;
-	margin-bottom: 20px;
-}
-.error{
-	border: 1px solid red;
-	-webkit-box-shadow: 0 0 3px red;
-	box-shadow: 0 0 3px red;
-}
-.conf{
-	border: 1px solid green;
-	-webkit-box-shadow: 0 0 3px green;
-	box-shadow: 0 0 3px green;
-}
-.regFormLabel{
-	position: absolute;
-}
-#nameReg{
-	position: relative;
-}
-.fornameReg{
-	position: absolute;
-	top: 48px;
-	left: 21px;
-	font-size: 10px;
-}
-.downHeader{
-	m30
-}
+
 /****************************pop up registr new style****************************/
 .reg-block{
 	display: flex;
@@ -773,4 +601,176 @@ body{
 	display: block;
 	margin: 0 auto;
 }
-
+/**********************************Стили для pop up окна********************************/
+form > input {
+	outline: 0;
+}
+.pop-up-main{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(46, 48, 54, 0.50);
+	z-index: 15;
+	display: none
+	
+}
+.header__info{
+	position: relative;
+}
+.content-pop-up-main{
+	top: 128px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 408px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+}
+.tab-item-reg{
+	position: relative;
+}
+.close-pop-up-reg{
+	position: absolute;
+    top: -110px;
+    right: -40px;
+}
+.tabs-reg-user{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	margin-bottom: 25px;
+}
+.sign-in{
+	padding: 13px 40px;
+	border-top-left-radius: 5px;
+	background-color: #2e3032;
+	width: 50%;
+}
+.sign-in a{
+	text-decoration: none;
+	font-family: "OpenSans";
+	font-size: 18px;
+	color: #fff ;
+}
+.sign-in:hover{
+	cursor: pointer;
+}
+.registr{
+	padding: 13px 40px;
+	border-top-right-radius: 5px;
+	background-color: #2e3032;
+	width: 50%;
+}
+.registr a{
+	text-decoration: none;
+	font-family: "OpenSans";
+	font-size: 18px;
+	color: #fff ;
+}
+.registr:hover{
+	cursor: pointer;
+}
+.active-registr{
+	background-color: #fff !important;
+	
+}
+.active-registr a{
+	color: #2e3036	;
+}
+#sign-in-form{
+	padding: 0 20px;
+}
+#reg-form{
+	padding: 0 20px;
+}
+.sign-in-inp{
+	outline: 0;
+	width: 100%;
+	border: 1px solid #e0e0e0;
+	padding: 15px 14px;
+	font-size: 12px;
+	font-family: "OpenSans";
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.registr-but{
+	outline: 0;
+	border: 0;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 12px 0;
+	background-color: #2e3036;
+	color: #fff;
+	font-size: 14.45px;
+	text-transform: uppercase;
+	font-family: "OpenSansExtraBold";
+	border-radius: 5px;
+}
+.registr-but:hover{
+	cursor: pointer;
+}
+.down-block-sign-in{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	height: 24px;
+}
+.soc-icons-sign-in{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	width: 30%;
+}
+.zabil-pass a{
+	font-size: 12px;
+	text-decoration: none;
+	font-family:"OpenSans";
+	color: #2e3036;
+}
+.reg-inp{
+	outline: 0;
+	width: 100%;
+	border: 1px solid #e0e0e0;
+	padding: 15px 14px;
+	font-size: 12px;
+	font-family: "OpenSans";
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.error{
+	border: 1px solid red;
+	-webkit-box-shadow: 0 0 3px red;
+	box-shadow: 0 0 3px red;
+}
+.conf{
+	border: 1px solid green;
+	-webkit-box-shadow: 0 0 3px green;
+	box-shadow: 0 0 3px green;
+}
+.regFormLabel{
+	position: absolute;
+}
+#nameReg{
+	position: relative;
+}
+.fornameReg{
+	position: absolute;
+	top: 48px;
+	left: 21px;
+	font-size: 10px;
+	
+}
