@@ -620,7 +620,6 @@ form > input {
 	position: relative;
 }
 .content-pop-up-main{
-	top: 128px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -752,14 +751,14 @@ form > input {
 	margin-bottom: 20px;
 }
 .error{
-	border: 1px solid red;
-	-webkit-box-shadow: 0 0 3px red;
-	box-shadow: 0 0 3px red;
+	border: 1px solid red !important;
+	-webkit-box-shadow: 0 0 3px red !important;
+	box-shadow: 0 0 3px red !important;
 }
 .conf{
-	border: 1px solid green;
-	-webkit-box-shadow: 0 0 3px green;
-	box-shadow: 0 0 3px green;
+	border: 1px solid green !important;
+	-webkit-box-shadow: 0 0 3px green !important;
+	box-shadow: 0 0 3px green !important;
 }
 .regFormLabel{
 	position: absolute;
@@ -771,6 +770,77 @@ form > input {
 	position: absolute;
 	top: 48px;
 	left: 21px;
-	font-size: 10px;
-	
+	font-size: 10px;	
+}
+/*********** pop up "Забыли пароль"*******************************************/
+
+.PasswordRecoveryMain{
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 544px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+}
+.PasswordRecoveryMain__content{
+	width: 100%;
+	position: relative;
+}
+.PasswordRecoveryMain__content--caption{
+	border-bottom: 1px solid #eee;
+}
+
+
+.PasswordRecoveryMain__content span {
+	font-size: 1.125rem;
+	font-family: "OpenSans";
+	font-weight: 200;
+	padding: 14px 0;
+	display: block;
+	margin-left: 27px;
+}
+.PasswordRecoveryMain__content--description{
+	padding: 0 27px;
+	margin: 18px 0;
+}
+.PasswordRecoveryMain__content--description p{
+	font-size: 0.75rem;
+	font-family: "OpenSansLight";
+	width: 80%;
+	margin-bottom: 18px
+}
+.PasswordRecoveryInput{
+	width: 100%;
+	font-size: 0.75rem;
+	font-family: "OpenSans";
+	padding: 15px;
+	outline: 0;
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+	margin-bottom: 18px;
+}
+.PasswordRecoveryMain__content--description  button {
+	outline: 0;
+	border: 0;
+	width: 35.6%;
+	margin-bottom: 20px;
+	padding: 12px 0;
+	background-color: #2e3036;
+	color: #fff;
+	font-size: 14.45px;
+	text-transform: uppercase;
+	font-family: "OpenSansExtraBold";
+	border-radius: 5px;
+}
+.PasswordRecoveryMain__content--description  button:hover {
+	cursor: pointer;
+}
+.closePopUpRecoveryPass{
+	position: absolute;
+	right: -40px;
+	top: -40px;
+}
+.closePopUpRecoveryPass:hover{
+	cursor: pointer;
 }

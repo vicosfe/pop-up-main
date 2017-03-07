@@ -18,13 +18,16 @@ $(".tab-reg").click(function() {
 
 
 	$(document).ready(function(){
-   $(".pop-up-main").hide();
+   $(".pop-up-main , .PasswordRecoveryMain").hide();
 });
-
+var closePopUpRecoveryPass = $(".closePopUpRecoveryPass");
+var jsPasswordRecoveryMain = $(".jsPasswordRecoveryMain");
+var contentPopUpMain = $(".content-pop-up-main");
 var signInProfile = $(".SignInProfile");
 var userLink = $(".userLink");
 var popUpMain = $(".pop-up-main");
 var exitPopUp = $(".close-pop-up-reg,.exitPopUp");
+var linkRecoveryPass = $(".zabil-pass");
 
 	signInProfile.on("click",  (e) => {
 		e.preventDefault();
@@ -36,10 +39,23 @@ var exitPopUp = $(".close-pop-up-reg,.exitPopUp");
 		popUpMain.hide();
 		return	false;
 	});
-
 	userLink.on("click",  (e) => {
 		e.preventDefault();
 		popUpMain.show();
+		contentPopUpMain.show();
+		return	false;
+	});
+	linkRecoveryPass.on("click", (e) =>{
+		e.preventDefault();
+		jsPasswordRecoveryMain.show();
+		contentPopUpMain.hide();
+		return	false;
+	});
+		closePopUpRecoveryPass.on("click",  (e) => {
+		e.preventDefault();
+		popUpMain.hide();
+		jsPasswordRecoveryMain.hide();
+
 		return	false;
 	});
 
@@ -47,6 +63,8 @@ var exitPopUp = $(".close-pop-up-reg,.exitPopUp");
 
 
 /***********************************************/
+		var PasswordRecoveryInput = $(".PasswordRecoveryInput");
+		var PasswordRecoveryForm = $(".PasswordRecoveryForm input");
 		var regFormInpt = $("#reg-form input");
 		var signInFormInpt = $("#sign-in-form input");
 		var mailSignIn = $("#mailSignIn");
@@ -66,7 +84,16 @@ var exitPopUp = $(".close-pop-up-reg,.exitPopUp");
 			reg_tel: /[0-9]$/,
 			sign_in_mail: 	/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,5}$/,
 			sign_in_pass: /^([a-zA-Z0-9@#$%^&+=*.\-_ ]){6,18}$/,
+			PasswordRecovery: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,5}$/
 		};
+
+
+function validatePassRecovery(){
+	if (!PasswordRecoveryInput.val() || PasswordRecoveryForm.hasClass("error")) {
+		return	false;
+	}
+	return true;
+};
 
 function validateReg(){			
 		if (!nameReg.val()  || !passwordRegRepl.val()  || !famReg.val()  || !mailReg.val()  || !phoneReg.val()  || !passwordReg.val()  || passwordReg.val()  != passwordRegRepl.val()  || $(regFormInpt).hasClass("error")){
@@ -75,6 +102,27 @@ function validateReg(){
 
 
 };
+
+$(phoneReg).mask("+7-999-999-9999");
+
+$(function regexpFormPassRecovery(){
+	'use strict';	
+	$.each($(PasswordRecoveryForm), function() {
+		$(this).on('keyup keydown change keypress', function(){
+			if(!regexes[$(this).attr('name')].test($(this).val())){
+				$(this).removeClass('conf');
+				$(this).addClass('error');
+			} else {
+				$(this).removeClass('error');
+				$(this).addClass('conf');
+			}
+		});
+	});
+		
+});
+
+
+
 $(function regexpReg(){
 	'use strict';	
 	$.each($(regFormInpt), function() {
@@ -112,9 +160,10 @@ $(function regexpSignIn(){
 		});
 	});		
 });
-$("#phoneReg").mask("+7(999) 999-9999");
 
-$(".registr-but").on("click", function (e) {
+
+var registrBut = $(".registr-but");
+$(registrBut).on("click", function (e) {
 		e.preventDefault();
         var $form = $("#reg-form");
         $.ajax({
@@ -133,4 +182,27 @@ $(".registr-but").on("click", function (e) {
       
         return false;
     });  
+
+
+
+
+var jsPasswordRecoveryButton = $(".jsPasswordRecoveryButton");
+$(jsPasswordRecoveryButton).on("click", function (e) {
+		e.preventDefault();
+        var $form = $(".PasswordRecoveryForm");
+        $.ajax({
+            type: "POST",
+            url: "#",
+            data: $form.serialize(),
+        }).done(function(data) {
+        	$("#").show().html(data);
+        	$("#").hide().html(data);
+        }).fail(function() {
+            console.log('fail');
+            $("#").show().html(data);
+            $("#").hide().html(data);
+        });
+      
+        return false;
+    }); 
 
